@@ -1,4 +1,4 @@
-package Stringss.Recursion;
+package Recursion;
 
 public class sumofneturalNum {
     public static int sum(int n){

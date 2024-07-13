@@ -1,4 +1,4 @@
-package Stringss.Recursion;
+package DividenConquer;
 
 public class quicksort {
     public static void printArr(int[] arr) {

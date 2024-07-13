@@ -1,4 +1,4 @@
-package Stringss.Recursion;
+package Recursion;
 
 public class fibonacci {
     public static int fibo(int n) {

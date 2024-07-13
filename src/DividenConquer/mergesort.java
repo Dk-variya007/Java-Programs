@@ -1,4 +1,4 @@
-package Stringss.Recursion;
+package DividenConquer;
 
 public class mergesort {
     public static void printArr(int[] arr) {

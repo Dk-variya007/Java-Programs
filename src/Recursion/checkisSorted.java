@@ -1,4 +1,4 @@
-package Stringss.Recursion;
+package Recursion;
 
 public class checkisSorted {
     public static boolean isSorted(int[] arr, int i) {

@@ -1,4 +1,4 @@
-package Stringss.Recursion;
+package Recursion;
 
 public class printDec {
     public static void print(int n) {
