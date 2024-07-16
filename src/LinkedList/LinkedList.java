@@ -1,5 +1,6 @@
 package LinkedList;
 
+
 public class LinkedList {
     public static class Node {
         int data;
@@ -89,6 +90,75 @@ public class LinkedList {
         return val;
     }
 
+    public static int removeLast() {
+        if (size == 0) {
+            System.out.println("ll is empty");
+            return Integer.MIN_VALUE;
+        } else if (size == 1) {
+            int val = head.data;
+            head = tail = null;
+            size = 0;
+            return val;
+        }
+        Node prev = head;
+        for (int i = 0; i < size - 2; i++) {
+            prev = prev.next;
+        }
+        int val = prev.next.data;  //tail data
+        prev.next = null;
+        tail = prev;
+        size--;
+        return val;
+    }
+
+    public static int search(int key) {
+        Node temp = head;
+        int i = 0;
+        while (temp != null) {
+            if (temp.data == key) {
+                return i;
+            }
+            temp = temp.next;
+            i++;
+        }
+        return -1;
+    }
+
+    public static void reverse() {
+        Node prev = null;
+        Node curr = tail = head;
+        Node next;
+        while (curr != null) {
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+    }
+
+    public static void deleteNthFromEnd(int n) {
+        int size = 0;
+        Node temp = head;
+        while (temp != null) {
+            temp = temp.next;
+            size++;
+        }
+        if (n == size) {
+            head = head.next; //removeFirst
+            return;
+        }
+        int i = 1;
+        int iToFind = size - n;
+        Node prev = head;
+        while (i < iToFind) {
+            prev = prev.next;
+            i++;
+        }
+        prev.next = prev.next.next;
+        return;
+    }
+
     public static void main(String[] args) {
         addFirst(2);
         addFirst(1);
@@ -96,7 +166,14 @@ public class LinkedList {
         addLast(4);
         add(2, 9);
         add(0, 10);
+        removeLast();
         print();
+        System.out.println(search(4));
         System.out.println(size);
+        print();
+        reverse();
+        print();
+        deleteNthFromEnd(3);
+        print();
     }
 }
