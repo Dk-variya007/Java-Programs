@@ -159,21 +159,35 @@ public class LinkedList {
         return;
     }
 
+    //find mid node
+    public Node findMid(Node head) {
+        Node slow = head;
+        Node fast = head;
+        while (fast.next != null && fast != null) {
+            slow = slow.next; //+1
+            fast = fast.next.next; //+2
+        }
+        return slow;
+    }
+
     public static void main(String[] args) {
+//        addFirst(2);
+//        addFirst(1);
+//        addLast(3);
+//        addLast(4);
+//        add(2, 9);
+//        add(0, 10);
+//        removeLast();
+//        print();
+//        System.out.println(search(4));
+//        System.out.println(size);
+//        print();
+//        reverse();
+//        print();
+//        deleteNthFromEnd(3);
+//        print();
         addFirst(2);
-        addFirst(1);
-        addLast(3);
-        addLast(4);
-        add(2, 9);
-        add(0, 10);
-        removeLast();
-        print();
-        System.out.println(search(4));
-        System.out.println(size);
-        print();
-        reverse();
-        print();
-        deleteNthFromEnd(3);
+        addLast(1);
         print();
     }
 }
