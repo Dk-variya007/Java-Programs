@@ -19,7 +19,7 @@ public class binarySearch {
         return  -1;
     }
     public static void main(String[] args) {
-        int number[]={1,2,45,65,87,342};
+        int[] number={1,2,45,65,87,342};
         Scanner sc=new Scanner(System.in);
         System.out.print("enter the value : ");
         int key=sc.nextInt();

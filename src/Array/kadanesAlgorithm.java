@@ -14,7 +14,7 @@ public class kadanesAlgorithm {
         System.out.println("Max is : "+ms);
     }
     public static void main(String[] args) {
-        int number[]={2,-2,4,5,-1,6};
+        int[] number={2,-2,4,5,-1,6};
         kadanes(number);
 
     }

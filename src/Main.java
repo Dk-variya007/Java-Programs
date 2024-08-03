@@ -1,36 +1,42 @@
 
-class ab {
-    public void sum(int a, int b, int c) {
-        System.out.println(a + b + c);
+class MyThread1 extends Thread {
+    @Override
+    public void run() {
+        while (true) {
+            System.out.println("Working on add feature");
+        }
     }
 
-    ab() {
-        System.out.println("constructor of ab");
-    }
-
-    ab(int a) {
-        System.out.println("constructor of ab" + a);
+    void work() {
+        while (true) {
+            System.out.println("working");
+        }
     }
 }
 
-class bc extends ab {
-    public void sum(int a, int b, int c) {
-        super.sum(1, 2, 3);
-        System.out.println("abc");
+class MyThread2 extends Thread {
+    @Override
+    public void run() {
+        while (true) {
+            System.out.println("working on a search feature");
+        }
     }
 
-    bc() {
-        super(1);
-        System.out.println("constructor of bc");
+    void eat() {
+        while (true) {
+            System.out.println("eating");
+        }
     }
 }
 
 class main {
     public static void main(String[] args) {
-        int a = 10;
-        int b = 5;
-        int c = a / b;
-        System.out.println(c);
+        MyThread1 a = new MyThread1();
+        MyThread2 b = new MyThread2();
+        //a.start();
+        a.work();
+        //b.start();
+        b.eat();
     }
 }
 
