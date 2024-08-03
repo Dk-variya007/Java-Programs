@@ -1,3 +1,5 @@
+package Array;
+
 public class kadanesAlgorithm {
     public static void kadanes(int number[]){
         int ms=Integer.MIN_VALUE;

@@ -1,3 +1,5 @@
+package Array;
+
 public class revers_array {
     public static void ReversArray(int arr[]) {
         int first = 0, last = arr.length - 1;

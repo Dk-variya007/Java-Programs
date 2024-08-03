@@ -1,3 +1,5 @@
+package Array;
+
 import java.util.Scanner;
 
 public class linearSearch {
@@ -13,7 +15,7 @@ public class linearSearch {
     }
     public static void main(String[] args) {
 
-//        int index=linearSearch(marks,key);
+//        int index=Array.linearSearch(marks,key);
 //        if(index==-1){
 //            System.out.println("not found");
 //        }else {

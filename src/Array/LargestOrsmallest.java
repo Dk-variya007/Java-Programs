@@ -1,3 +1,5 @@
+package Array;
+
 public class LargestOrsmallest {
     public  static int largetsNumber(int arr[]){
         int largest=Integer.MIN_VALUE; // -infinity

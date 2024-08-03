@@ -1,3 +1,5 @@
+package Array;
+
 public class pairsinarray {
     public  static  void pairs(int arr[]){
         int totalpairs=0;

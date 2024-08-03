@@ -1,3 +1,5 @@
+package Array;
+
 public class max_sub_array_sum {
     public  static  void  maxsum(int arr[]){
         int currentSum=0;

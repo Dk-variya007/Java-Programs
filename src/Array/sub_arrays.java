@@ -1,3 +1,5 @@
+package Array;
+
 public class sub_arrays {
     public  static  void  subarray(int arr[]){
         int totalsubarrays=0;

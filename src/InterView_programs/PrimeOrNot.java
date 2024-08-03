@@ -2,7 +2,10 @@ package InterView_programs;
 
 public class PrimeOrNot {
     public static boolean isPrime(int n) {
-        for (int i = 2; i < n / 2; i++) {
+        if (n <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(n); i++) {
             if (n % i == 0) {
                 return false;
             }
@@ -10,8 +13,8 @@ public class PrimeOrNot {
         return true;
     }
 
-    public static void Prime(int n) {
-        for (int i = 1; i <= n; i++) {
+    public static void printPrimes(int n) {
+        for (int i = 2; i <= n; i++) {
             if (isPrime(i)) {
                 System.out.print(i + " ");
             }
@@ -19,7 +22,7 @@ public class PrimeOrNot {
     }
 
     public static void main(String[] args) {
-        System.out.println(isPrime(2));
-        Prime(10);
+        System.out.println(isPrime(2)); // Should print true
+        printPrimes(10); // Should print prime numbers up to 10
     }
 }

@@ -1,3 +1,5 @@
+package Array;
+
 public class Trapping_Water {
     public  static int trappedWater(int height[]){
         int n=height.length;

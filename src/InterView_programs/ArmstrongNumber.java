@@ -11,8 +11,18 @@ public class ArmstrongNumber {
         return temp == sum;
     }
 
+    public static void rangeInArms(int start, int end) {
+
+        for (int i = start; i <= end; i++) {
+            if (isArmstrong(i)) {
+                System.out.println(i);
+            }
+        }
+    }
+
     public static void main(String[] args) {
         System.out.println(isArmstrong(124));
         System.out.println(isArmstrong(153));
+        rangeInArms(1, 10);
     }
 }

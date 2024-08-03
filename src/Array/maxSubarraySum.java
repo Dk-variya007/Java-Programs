@@ -1,3 +1,5 @@
+package Array;
+
 public class maxSubarraySum {
     public  static  void maxSubarray(int number[]){
         int CurrSum=0;
