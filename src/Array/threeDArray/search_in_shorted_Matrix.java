@@ -1,4 +1,4 @@
-package Array;
+package Array.threeDArray;
 
 public class search_in_shorted_Matrix {
     public static boolean search(int matrix[][], int key) {

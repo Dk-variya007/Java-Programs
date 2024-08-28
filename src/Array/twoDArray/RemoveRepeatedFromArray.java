@@ -1,4 +1,4 @@
-package InterView_programs;
+package Array.twoDArray;
 
 public class RemoveRepeatedFromArray {
     public static int removeDuplicateElements(int arr[], int n) {

@@ -1,4 +1,4 @@
-package Array;
+package Array.threeDArray;
 
 public class Diagonal_sum {
     public static int diagonalsum(int matrix[][]) {

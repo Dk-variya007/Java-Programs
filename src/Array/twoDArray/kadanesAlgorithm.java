@@ -1,4 +1,4 @@
-package Array;
+package Array.twoDArray;
 
 public class kadanesAlgorithm {
     public static void kadanes(int number[]){

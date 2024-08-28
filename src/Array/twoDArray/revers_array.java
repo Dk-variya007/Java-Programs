@@ -1,4 +1,4 @@
-package Array;
+package Array.twoDArray;
 
 public class revers_array {
     public static void ReversArray(int arr[]) {

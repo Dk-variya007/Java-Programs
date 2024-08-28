@@ -1,4 +1,4 @@
-package Array;
+package Array.twoDArray;
 
 public class BuyAndSellStocks {
     public  static  int buyAndsell(int Price[]) {

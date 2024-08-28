@@ -1,4 +1,4 @@
-package Array;
+package Array.twoDArray;
 
 public class LargestOrsmallest {
     public  static int largetsNumber(int arr[]){

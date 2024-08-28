@@ -1,43 +1,23 @@
-
-class MyThread1 extends Thread {
-    @Override
-    public void run() {
-        while (true) {
-            System.out.println("Working on add feature");
-        }
-    }
-
-    void work() {
-        while (true) {
-            System.out.println("working");
-        }
-    }
-}
-
-class MyThread2 extends Thread {
-    @Override
-    public void run() {
-        while (true) {
-            System.out.println("working on a search feature");
-        }
-    }
-
-    void eat() {
-        while (true) {
-            System.out.println("eating");
-        }
-    }
-}
-
 class main {
+    public static void subArray(int[] arr) {
+        int i, j, k;
+        for (i = 0; i <= arr.length - 1; i++) {
+            int start = i;
+            for (j = i; j < arr.length; j++) {
+                int end = j;
+                for (k = start; k <= end; k++) {
+                    System.out.print(arr[k]);
+                }
+                System.out.println();
+            }
+
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
-        MyThread1 a = new MyThread1();
-        MyThread2 b = new MyThread2();
-        //a.start();
-        a.work();
-        //b.start();
-        b.eat();
+        int[] arr = {1, 3, 5, 7, 5, 10};
+        subArray(arr);
+
     }
 }
-
-

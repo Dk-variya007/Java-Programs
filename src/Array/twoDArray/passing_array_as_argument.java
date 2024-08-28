@@ -1,4 +1,4 @@
-package Array;
+package Array.twoDArray;
 
 public class passing_array_as_argument {
     public static void Update(int marks[],int nonchanagle){

@@ -1,4 +1,4 @@
-package Array;
+package Array.twoDArray;
 
 public class maxSubarraySum {
     public  static  void maxSubarray(int number[]){

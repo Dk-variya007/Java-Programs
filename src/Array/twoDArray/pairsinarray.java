@@ -1,4 +1,4 @@
-package Array;
+package Array.twoDArray;
 
 public class pairsinarray {
     public  static  void pairs(int arr[]){

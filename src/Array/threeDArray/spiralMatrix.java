@@ -1,4 +1,4 @@
-package Array;
+package Array.threeDArray;
 
 public class spiralMatrix {
     public static void spiral(int matrix[][]) {

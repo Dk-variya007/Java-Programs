@@ -1,4 +1,4 @@
-package Array;
+package Array.twoDArray;
 
 import java.util.Scanner;
 
@@ -14,16 +14,15 @@ public class linearSearch {
         return  -1;
     }
     public static void main(String[] args) {
-
-//        int index=Array.linearSearch(marks,key);
+//        int index=Array.twoDArray.linearSearch(marks,key);
 //        if(index==-1){
 //            System.out.println("not found");
 //        }else {
 //            System.out.println("value found at index : "+index);
 //        }
         int marks[] = {1, 2, 3, 4, 5, 6, 7, 8};
-        boolean flag = true;
-        while (flag) {
+        boolean flag = false;
+        while (!flag) {
             System.out.print("Enter the value: ");
             Scanner sc = new Scanner(System.in);
             int key = sc.nextInt();
@@ -31,10 +30,10 @@ public class linearSearch {
             for (int i = 0; i <marks.length; i++) {
                 if (marks[i] == key) {
                     System.out.println("Value found");
-                    flag = false;
+                    flag = true;
                 }
             }
-            if (flag) {
+            if (!flag) {
                 System.out.println("Value not found. Try again.");
             }
         }

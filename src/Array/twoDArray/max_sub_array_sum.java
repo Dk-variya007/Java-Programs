@@ -1,4 +1,4 @@
-package Array;
+package Array.twoDArray;
 
 public class max_sub_array_sum {
     public  static  void  maxsum(int arr[]){

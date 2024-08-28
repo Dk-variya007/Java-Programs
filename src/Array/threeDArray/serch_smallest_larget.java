@@ -1,4 +1,4 @@
-package Array;
+package Array.threeDArray;
 
 import java.util.Scanner;
 

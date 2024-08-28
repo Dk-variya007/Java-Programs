@@ -1,4 +1,4 @@
-package Array;
+package Array.twoDArray;
 
 public class Trapping_Water {
     public  static int trappedWater(int height[]){

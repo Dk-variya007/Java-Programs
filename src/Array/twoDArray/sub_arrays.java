@@ -1,4 +1,4 @@
-package Array;
+package Array.twoDArray;
 
 public class sub_arrays {
     public  static  void  subarray(int arr[]){
