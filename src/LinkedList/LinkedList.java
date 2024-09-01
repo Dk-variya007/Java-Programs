@@ -170,24 +170,77 @@ public class LinkedList {
         return slow;
     }
 
+    public static boolean isCycle() {
+        Node slow = head;
+        Node fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next; // +1
+            fast = fast.next.next; // +2
+            if (slow == fast) {
+                return true; // cycle exist
+            }
+        }
+        return false; //cycle doesn't exists
+    }
+
+    public static void removeCycle() {
+        //detect a loop
+        Node slow = head;
+        Node fast = head;
+        boolean isCycle = false;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if (fast == slow) {
+                isCycle = true;
+                break;
+            }
+        }
+        if (isCycle == false) {
+            return;
+        }
+        //finding a meeting point
+        slow = head;
+        Node prev = null; //last node
+        while (slow != fast) {
+            prev = fast;
+            slow = slow.next;
+            fast = fast.next;
+        }
+        //remove cycle -> last.next=null
+        prev.next = null;
+    }
+
+
     public static void main(String[] args) {
+////        addFirst(2);
+////        addFirst(1);
+////        addLast(3);
+////        addLast(4);
+////        add(2, 9);
+////        add(0, 10);
+////        removeLast();
+////        print();
+////        System.out.println(search(4));
+////        System.out.println(size);
+////        print();
+////        reverse();
+////        print();
+////        deleteNthFromEnd(3);
+////        print();
 //        addFirst(2);
-//        addFirst(1);
-//        addLast(3);
-//        addLast(4);
-//        add(2, 9);
-//        add(0, 10);
-//        removeLast();
-//        print();
-//        System.out.println(search(4));
-//        System.out.println(size);
-//        print();
-//        reverse();
-//        print();
-//        deleteNthFromEnd(3);
-//        print();
-        addFirst(2);
-        addLast(1);
-        print();
+//        addLast(1);
+
+
+        //for cycle find
+        head = new Node(1);
+        head.next = new Node(2);
+        head.next.next = new Node(3);
+        head.next.next.next = new Node(4);
+        head.next.next.next.next = head.next;
+        System.out.println(isCycle());
+        removeCycle();
+        System.out.println(isCycle());
+
     }
 }
