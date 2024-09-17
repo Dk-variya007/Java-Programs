@@ -18,7 +18,6 @@ public class Trapping_Water {
         }
 
         int[] rightMax = new int[n];
-
         rightMax[n - 1] = height[n - 1];
         // Calculate the right max boundary - array (from right to left)
         for (int i = n - 2; i >= 0; i--) {
