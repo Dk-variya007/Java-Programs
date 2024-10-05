@@ -1,23 +1,32 @@
-class main {
+import java.util.Stack;
 
-    public static int traping(int[] arr) {
-        int[] leftMax = new int[arr.length];
-        int[] rightMax = new int[arr.length];
-        leftMax[0] = arr[0];
-        for (int i = 1; i <= arr.length - 1; i++) {
-            leftMax[i] = Math.max(arr[i], leftMax[i + 1]);
+class main {
+    public static void stockSpan(int[] stock, int[] span) {
+        Stack<Integer> s = new Stack<>();
+        span[0] = 1;
+        s.push(0);
+        for (int i = 1; i <= stock.length - 1; i++) {
+            int currentPrice = stock[i];
+            while (!s.isEmpty() && currentPrice >= stock[s.peek()]) {
+                s.pop();
+            }
+            if (s.isEmpty()) {
+                span[i] = i + 1;
+            } else {
+                int highPrev = s.peek();
+                span[i] = i - highPrev;
+            }
+            s.push(i);
         }
-        rightMax[arr.length - 1] = leftMax[arr.length - 1];
-        for (int j=1;j<=arr.length-1;j++){
-            rightMax[j]=Math.max(arr[j],rightMax[j+1]);
-        }
-return  6;
     }
 
     public static void main(String[] args) {
-        int[] arr = {4, 2, 0, 6, 3, 2, 5};
-        System.out.println(traping(arr));
-
-
+        int[] stocks = {100, 80, 60, 70, 60, 85, 100};
+        int[] spans = new int[stocks.length];
+        stockSpan(stocks,spans);
+        // Print the results
+        for (int i = 0; i < spans.length; i++) {
+            System.out.println(spans[i]);
+        }
     }
 }
