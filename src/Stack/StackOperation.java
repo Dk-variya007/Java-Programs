@@ -78,6 +78,21 @@ public class StackOperation {
             s.push(top);
 
         }
+        public static void pushAtAnyIndex(Stack<Integer> s,int data,int index){
+            if(s.isEmpty()){
+                s.push(data);
+                return;
+            }
+            //convert stack to list
+            ArrayList<Integer> list=new ArrayList<>(s);
+            //insert element at index
+            list.add(index,data);
+            //clear stack
+            s.clear();
+            for(Integer i:list){
+                s.push(i);
+            }
+        }
 
         public static String reversString(String str) {
             Stack<Character> s = new Stack<>();
@@ -109,9 +124,10 @@ public class StackOperation {
         public static void main(String[] args) {
             //using Inbuilt Stack collection
             Stack<Integer> s = new Stack<>();
-            s.push(1);
-            s.push(2);
-            s.push(3);
+            s.push(1);//index 0
+            s.push(2);//index 1
+            s.push(4);//index 2
+            pushAtAnyIndex(s,3,2);
             //for print stack
            while (!s.isEmpty()){
                System.out.println(s.peek());
